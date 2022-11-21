@@ -1,5 +1,29 @@
+* {
+  margin: 0;
+}
+
 .App {
   padding: 0px 50px;
+}
+
+.text-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+}
+
+.cart-buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.cart-add-remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 .nav {
@@ -38,7 +62,7 @@
 }
 
 .main-img {
-  width: 80%;
+  width: 70%;
   border-radius: 20px;
 }
 
@@ -52,7 +76,7 @@
 }
 
 .thumbnail {
-  width: 18%;
+  width: 15.4%;
   border-radius: 20px;
 }
 
@@ -69,5 +93,25 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 20px;
+}
+
+.companyname {
+  font-size: 20px;
+}
+
+.title {
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.card-text {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.price-container {
+  display: flex;
   gap: 20px;
 }/*# sourceMappingURL=styles.css.map */
