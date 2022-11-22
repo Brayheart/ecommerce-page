@@ -15,12 +15,12 @@ class App extends React.Component {
         <section class='main-content'>
           <div className="half">
             <div className='main-img-container'>
-              <img src={require('./images/image-product-1.jpg')} className='main-img' alt="" />
+              <img src={process.env.PUBLIC_URL + '/images/image-product-1.jpg'} className='main-img' alt="" />
               <div className='thumbnail-container'>
-                <img src={require('./images/image-product-1-thumbnail.jpg')} className='thumbnail' alt="" />
-                <img src={require('./images/image-product-2-thumbnail.jpg')} className='thumbnail' alt="" />
-                <img src={require('./images/image-product-3-thumbnail.jpg')} className='thumbnail' alt="" />
-                <img src={require('./images/image-product-4-thumbnail.jpg')} className='thumbnail' alt="" />
+                <img src={process.env.PUBLIC_URL + '/images/image-product-1-thumbnail.jpg'} className='thumbnail' alt="" />
+                <img src={process.env.PUBLIC_URL + '/images/image-product-2-thumbnail.jpg'} className='thumbnail' alt="" />
+                <img src={process.env.PUBLIC_URL + '/images/image-product-3-thumbnail.jpg'} className='thumbnail' alt="" />
+                <img src={process.env.PUBLIC_URL + '/images/image-product-4-thumbnail.jpg'} className='thumbnail' alt="" />
               </div>  
             </div>
           </div>
@@ -40,9 +40,9 @@ class App extends React.Component {
               <div>$250.00</div>
               <div className="cart-buttons">
                 <div className='cart-add-remove'>
-                  <img src={require('./images/icon-minus.svg').default} alt="" />
+                  <img src={process.env.PUBLIC_URL + '/images/icon-minus.svg'} alt="" />
                   <div>0</div>
-                  <img src={require('./images/icon-plus.svg').default} alt="" />
+                  <img src={process.env.PUBLIC_URL + '/images/icon-plus.svg'} alt="" />
                 </div>
                 <button>Add to cart</button>
               </div>
