@@ -2,8 +2,35 @@
   margin: 0;
 }
 
+h1 {
+  color: white;
+}
+
+.overlayImg {
+  width: 100%;
+}
+
+.modalContent {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 40%;
+}
+
+.modal {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.755);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100%;
+}
+
 .App {
+  position: relative;
   padding: 0px 50px;
+  min-height: 100vh;
 }
 
 .text-content-container {
@@ -78,6 +105,9 @@
 .thumbnail {
   width: 15.4%;
   border-radius: 20px;
+}
+.thumbnail:hover {
+  cursor: pointer;
 }
 
 .main-img-container {

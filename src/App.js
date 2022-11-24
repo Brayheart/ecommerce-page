@@ -5,11 +5,36 @@ import './styles.css';
 class App extends React.Component {
   constructor(){
     super()
+
+    this.state = {
+      modal: false
+    }
+
+  }
+
+  Modal = () => {
+    this.setState({modal: !this.state.modal})
+  }
+
+  closeModal = (e) => {
+    if (e.target === e.currentTarget) {
+      this.setState({modal: false})
+   }
   }
 
   render() {
     return (
       <div className="App">
+
+        {
+          this.state.modal && <div onClick={(e) => this.closeModal(e)} className="modal">
+            <div className="modalContent">
+            <h1 onClick={this.Modal}>X</h1>
+            <img src={process.env.PUBLIC_URL + '/images/image-product-1.jpg'} className='overlayImg' alt="" />
+            </div>
+          </div>
+        }
+
         <Nav/>
 
         <section class='main-content'>
@@ -17,10 +42,10 @@ class App extends React.Component {
             <div className='main-img-container'>
               <img src={process.env.PUBLIC_URL + '/images/image-product-1.jpg'} className='main-img' alt="" />
               <div className='thumbnail-container'>
-                <img src={process.env.PUBLIC_URL + '/images/image-product-1-thumbnail.jpg'} className='thumbnail' alt="" />
-                <img src={process.env.PUBLIC_URL + '/images/image-product-2-thumbnail.jpg'} className='thumbnail' alt="" />
-                <img src={process.env.PUBLIC_URL + '/images/image-product-3-thumbnail.jpg'} className='thumbnail' alt="" />
-                <img src={process.env.PUBLIC_URL + '/images/image-product-4-thumbnail.jpg'} className='thumbnail' alt="" />
+                <img onClick={this.Modal} src={process.env.PUBLIC_URL + '/images/image-product-1-thumbnail.jpg'} className='thumbnail' alt="" />
+                <img onClick={this.Modal} src={process.env.PUBLIC_URL + '/images/image-product-2-thumbnail.jpg'} className='thumbnail' alt="" />
+                <img onClick={this.Modal} src={process.env.PUBLIC_URL + '/images/image-product-3-thumbnail.jpg'} className='thumbnail' alt="" />
+                <img onClick={this.Modal} src={process.env.PUBLIC_URL + '/images/image-product-4-thumbnail.jpg'} className='thumbnail' alt="" />
               </div>  
             </div>
           </div>
