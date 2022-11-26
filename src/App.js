@@ -9,7 +9,8 @@ class App extends React.Component {
     super()
 
     this.state = {
-      modal: false
+      modal: false,
+      counter: 0
     }
 
   }
@@ -22,6 +23,16 @@ class App extends React.Component {
     if (e.target === e.currentTarget) {
       this.setState({modal: false})
    }
+  }
+
+  add = () => {
+    this.setState({counter: this.state.counter+=1})
+  }
+
+  remove = () => {
+    if(this.state.counter > 0){
+      this.setState({counter: this.state.counter-=1})
+    }
   }
 
   render() {
@@ -79,9 +90,9 @@ class App extends React.Component {
               <div className='oldprice'>$250.00</div>
               <div className="cart-buttons">
                 <div className='cart-add-remove'>
-                  <img src={process.env.PUBLIC_URL + '/images/icon-minus.svg'} alt="" />
-                  <div>0</div>
-                  <img src={process.env.PUBLIC_URL + '/images/icon-plus.svg'} alt="" />
+                  <img onClick={this.remove} src={process.env.PUBLIC_URL + '/images/icon-minus.svg'} className='remove' alt="" />
+                  <div>{this.state.counter}</div>
+                  <img onClick={this.add} src={process.env.PUBLIC_URL + '/images/icon-plus.svg'} className='add' alt="" />
                 </div>
                 <button className='add-to-cart'>Add to cart</button>
               </div>

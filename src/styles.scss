@@ -49,6 +49,11 @@ h1 {
     align-items: center;
 }
 
+.add,
+.remove {
+    cursor: pointer;
+}
+
 .cart-add-remove {
     display: flex;
     align-items: center;
