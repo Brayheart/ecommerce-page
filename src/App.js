@@ -33,16 +33,16 @@ class App extends React.Component {
             <div className="modalContent">
             <Carousel>
                 <div>
-                  <img onClick={this.Modal} src={process.env.PUBLIC_URL + '/images/image-product-1.jpg'} className='' alt="" />
+                  <img src={process.env.PUBLIC_URL + '/images/image-product-1.jpg'} className='' alt="" />
                 </div>
                 <div>
-                  <img onClick={this.Modal} src={process.env.PUBLIC_URL + '/images/image-product-2.jpg'} className='' alt="" />
+                  <img src={process.env.PUBLIC_URL + '/images/image-product-2.jpg'} className='' alt="" />
                 </div>
                 <div>
-                  <img onClick={this.Modal} src={process.env.PUBLIC_URL + '/images/image-product-3.jpg'} className='' alt="" />
+                  <img src={process.env.PUBLIC_URL + '/images/image-product-3.jpg'} className='' alt="" />
                 </div>
                 <div>
-                  <img onClick={this.Modal} src={process.env.PUBLIC_URL + '/images/image-product-4.jpg'} className='' alt="" />
+                  <img src={process.env.PUBLIC_URL + '/images/image-product-4.jpg'} className='' alt="" />
                 </div>
             </Carousel>
             </div>
