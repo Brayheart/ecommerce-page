@@ -31,7 +31,6 @@ class App extends React.Component {
         {
           this.state.modal && <div onClick={(e) => this.closeModal(e)} className="modal">
             <div className="modalContent">
-            <h1 onClick={this.Modal}>X</h1>
             <Carousel>
                 <div>
                   <img onClick={this.Modal} src={process.env.PUBLIC_URL + '/images/image-product-1.jpg'} className='' alt="" />
