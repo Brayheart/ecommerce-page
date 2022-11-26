@@ -83,7 +83,7 @@ class App extends React.Component {
                   <div>0</div>
                   <img src={process.env.PUBLIC_URL + '/images/icon-plus.svg'} alt="" />
                 </div>
-                <button>Add to cart</button>
+                <button className='add-to-cart'>Add to cart</button>
               </div>
             </div>
           </div>
