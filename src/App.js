@@ -1,5 +1,7 @@
 import React from 'react';
 import Nav from './components/Navbar'
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 import './styles.css';
 
 class App extends React.Component {
@@ -30,7 +32,20 @@ class App extends React.Component {
           this.state.modal && <div onClick={(e) => this.closeModal(e)} className="modal">
             <div className="modalContent">
             <h1 onClick={this.Modal}>X</h1>
-            <img src={process.env.PUBLIC_URL + '/images/image-product-1.jpg'} className='overlayImg' alt="" />
+            <Carousel>
+                <div>
+                  <img onClick={this.Modal} src={process.env.PUBLIC_URL + '/images/image-product-1.jpg'} className='' alt="" />
+                </div>
+                <div>
+                  <img onClick={this.Modal} src={process.env.PUBLIC_URL + '/images/image-product-2.jpg'} className='' alt="" />
+                </div>
+                <div>
+                  <img onClick={this.Modal} src={process.env.PUBLIC_URL + '/images/image-product-3.jpg'} className='' alt="" />
+                </div>
+                <div>
+                  <img onClick={this.Modal} src={process.env.PUBLIC_URL + '/images/image-product-4.jpg'} className='' alt="" />
+                </div>
+            </Carousel>
             </div>
           </div>
         }

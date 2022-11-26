@@ -91,6 +91,12 @@ h1 {
   width: 50%;
 }
 
+.carousel .thumbs {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+}
+
 .main-img {
   width: 70%;
   border-radius: 20px;
