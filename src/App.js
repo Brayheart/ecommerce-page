@@ -76,7 +76,7 @@ class App extends React.Component {
                 <div>50%</div>
               </div>
               
-              <div>$250.00</div>
+              <div className='oldprice'>$250.00</div>
               <div className="cart-buttons">
                 <div className='cart-add-remove'>
                   <img src={process.env.PUBLIC_URL + '/images/icon-minus.svg'} alt="" />

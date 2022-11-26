@@ -53,7 +53,10 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
+    background-color: #F7F8FD;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .nav {
@@ -136,6 +139,7 @@ h1 {
 }
 
 .companyname {
+    color: #F07C3A;
     font-size: 20px;
 }
 
@@ -146,11 +150,37 @@ h1 {
 }
 
 .card-text {
+    color: #858689;
     font-size: 18px;
     line-height: 1.5;
 }
 
+.oldprice {
+    color: #858689;
+    text-decoration: line-through;
+}
+
 .price-container {
+    font-weight: 700;
     display: flex;
     gap: 20px;
+    align-items: center;
+    font-size: 35px;
+
+    :nth-child(2){
+        background-color: #FCEEE1;
+        color: #F07C3A;
+        padding: 5px 8px;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+}
+
+.add-to-cart {
+    border-radius: 10px;
+    height: 48px;
+    width: 250px;
+    border: none;
+    background-color: #F07C3A;
+    color: white;
 }
