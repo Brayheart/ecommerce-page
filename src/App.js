@@ -11,6 +11,12 @@ class App extends React.Component {
     this.state = {
       modal: false,
       cartView: false,
+      item: {
+        img: <img src={process.env.PUBLIC_URL + '/images/image-product-1.jpg'} className='cart-img' alt="" />,
+        title: 'Fall Limited Edition Sneakers',
+        price: 125
+      },
+      cart: [],
       counter: 0
     }
 
@@ -41,7 +47,9 @@ class App extends React.Component {
   }
 
   addToCart = () => {
-    console.log('add to cart')
+    if(this.state.cart.length === 0){
+      this.state.cart.push(this.state.item)
+    }
   }
 
   render() {
@@ -83,7 +91,21 @@ class App extends React.Component {
             {this.state.cartView &&
               <div className='cart'>
               <h2>Cart</h2>
-              <p>Your Cart is Empty</p>
+              {
+                this.state.cart.length < 1 &&
+                <p>Your Cart is Empty</p>
+              }
+              {
+                this.state.cart.length === 1 &&
+                <div>
+                  <div>{this.state.cart[0].img}</div>
+                  <div className='cart-text-container'>
+                    <div className='cart-text-title'>{this.state.cart[0].title}</div>
+                    <div className='cart-text-price'>{this.state.cart[0].price} x {this.state.counter} {this.state.cart[0].price * this.state.counter}</div>
+                  </div>
+                  <button className='checkout'>Checkout</button>
+                </div>
+              }
             </div>
             }
           </li>
@@ -123,7 +145,7 @@ class App extends React.Component {
                   <div>{this.state.counter}</div>
                   <img onClick={this.add} src={process.env.PUBLIC_URL + '/images/icon-plus.svg'} className='add' alt="" />
                 </div>
-                <button className='add-to-cart'>Add to cart</button>
+                <button onClick={this.addToCart} className='add-to-cart'>Add to cart</button>
               </div>
             </div>
           </div>

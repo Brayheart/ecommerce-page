@@ -43,6 +43,10 @@ h1 {
     width: 80%;
 }
 
+.cart-img {
+    width: 50px;
+}
+
 .cart-buttons {
     display: flex;
     gap: 20px;
@@ -200,6 +204,10 @@ h1 {
     }
 }
 
+.checkout {
+    
+}
+
 .add-to-cart {
     border-radius: 10px;
     height: 48px;
@@ -207,4 +215,5 @@ h1 {
     border: none;
     background-color: #F07C3A;
     color: white;
+    cursor: pointer;
 }
