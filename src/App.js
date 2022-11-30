@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from './components/Navbar'
+// import Nav from './components/Navbar'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import './styles.css';
@@ -10,6 +10,7 @@ class App extends React.Component {
 
     this.state = {
       modal: false,
+      cartView: false,
       counter: 0
     }
 
@@ -33,6 +34,14 @@ class App extends React.Component {
     if(this.state.counter > 0){
       this.setState({counter: this.state.counter-=1})
     }
+  }
+
+  cartView = () => {
+    this.setState({cartView: !this.state.cartView})
+  }
+
+  addToCart = () => {
+    console.log('add to cart')
   }
 
   render() {
@@ -60,7 +69,27 @@ class App extends React.Component {
           </div>
         }
 
-        <Nav/>
+      <nav className='nav'>
+        <ol className='nav-items'>
+          <li><img src={process.env.PUBLIC_URL + '/images/logo.svg'} alt="" /></li>
+          <li>Colections</li>
+          <li>Men</li>
+          <li>Women</li>
+          <li>Contact</li>
+        </ol>
+        <div className='nav-icons'>
+          <li>
+            <button onClick={this.cartView} className='blank'><img src={process.env.PUBLIC_URL + '/images/icon-cart.svg'} className='shopping-cart' alt="" /></button>
+            {this.state.cartView &&
+              <div className='cart'>
+              <h2>Cart</h2>
+              <p>Your Cart is Empty</p>
+            </div>
+            }
+          </li>
+          <li><img src={process.env.PUBLIC_URL + '/images/image-avatar.png'} className='profile-img' alt="" /></li>
+        </div>
+      </nav>
 
         <section class='main-content'>
           <div className="half">
