@@ -190,6 +190,17 @@ h1 {
     gap: 20px;
 }
 
+.notification {
+    font-size: 10px;
+    position: absolute;
+    right: 5px;
+    top: -3px;
+    background-color: #F07C3A;
+    width: 15px;
+    border-radius: 30px;
+    color: white;
+}
+
 .companyname {
     color: #F07C3A;
     font-size: 20px;

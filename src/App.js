@@ -14,7 +14,8 @@ class App extends React.Component {
       item: {
         img: <img src={process.env.PUBLIC_URL + '/images/image-product-1.jpg'} className='cart-img' alt="" />,
         title: 'Fall Limited Edition Sneakers',
-        price: 125
+        price: 125,
+        count: 0
       },
       cart: [],
       counter: 0
@@ -50,6 +51,8 @@ class App extends React.Component {
     if(this.state.cart.length === 0){
       this.state.cart.push(this.state.item)
     }
+    this.state.cart[0].count += this.state.counter
+    this.setState({cart: this.state.cart})
   }
 
   render() {
@@ -87,7 +90,10 @@ class App extends React.Component {
         </ol>
         <div className='nav-icons'>
           <li className='cart-master-container'>
-            <button onClick={this.cartView} className='blank'><img src={process.env.PUBLIC_URL + '/images/icon-cart.svg'} className='shopping-cart' alt="" /></button>
+            <button onClick={this.cartView} className='blank'>
+              {this.state.cart.length !== 0 && <p className='notification'>{this.state.cart[0].count}</p>}
+              <img src={process.env.PUBLIC_URL + '/images/icon-cart.svg'} className='shopping-cart' alt="" />
+            </button>
             {this.state.cartView &&
               <div className='cart'>
               <h2 className='cart-title'>Cart</h2>
@@ -102,7 +108,7 @@ class App extends React.Component {
                     <div>{this.state.cart[0].img}</div>
                       <div className='cart-text-container'>
                         <div className='cart-text-title'>{this.state.cart[0].title}</div>
-                        <div className='cart-text-price'>{`$${this.state.cart[0].price}.00`} x {this.state.counter} {`$${this.state.cart[0].price * this.state.counter}.00`}</div>
+                        <div className='cart-text-price'>{`$${this.state.cart[0].price}.00`} x {this.state.cart[0].count} {`$${this.state.cart[0].price * this.state.counter}.00`}</div>
                       </div>
                   </div>
                   <button className='checkout'>Checkout</button>
