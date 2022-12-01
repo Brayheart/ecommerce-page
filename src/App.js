@@ -86,11 +86,11 @@ class App extends React.Component {
           <li>Contact</li>
         </ol>
         <div className='nav-icons'>
-          <li>
+          <li className='cart-master-container'>
             <button onClick={this.cartView} className='blank'><img src={process.env.PUBLIC_URL + '/images/icon-cart.svg'} className='shopping-cart' alt="" /></button>
             {this.state.cartView &&
               <div className='cart'>
-              <h2>Cart</h2>
+              <h2 className='cart-title'>Cart</h2>
               {
                 this.state.cart.length < 1 &&
                 <p>Your Cart is Empty</p>
@@ -98,10 +98,12 @@ class App extends React.Component {
               {
                 this.state.cart.length === 1 &&
                 <div>
-                  <div>{this.state.cart[0].img}</div>
-                  <div className='cart-text-container'>
-                    <div className='cart-text-title'>{this.state.cart[0].title}</div>
-                    <div className='cart-text-price'>{this.state.cart[0].price} x {this.state.counter} {this.state.cart[0].price * this.state.counter}</div>
+                  <div className='cart-container'>
+                    <div>{this.state.cart[0].img}</div>
+                      <div className='cart-text-container'>
+                        <div className='cart-text-title'>{this.state.cart[0].title}</div>
+                        <div className='cart-text-price'>{`$${this.state.cart[0].price}.00`} x {this.state.counter} {`$${this.state.cart[0].price * this.state.counter}.00`}</div>
+                      </div>
                   </div>
                   <button className='checkout'>Checkout</button>
                 </div>
