@@ -34,7 +34,7 @@ class App extends React.Component {
   }
 
   add = () => {
-    this.setState({counter: this.state.counter+=1})
+    this.setState({counter: this.state.counter+=1, cartView: false})
   }
 
   remove = () => {
@@ -52,7 +52,7 @@ class App extends React.Component {
       this.state.cart.push(this.state.item)
     }
     this.state.cart[0].count += this.state.counter
-    this.setState({cart: this.state.cart})
+    this.setState({cart: this.state.cart, counter: 0})
   }
 
   render() {
@@ -108,7 +108,7 @@ class App extends React.Component {
                     <div>{this.state.cart[0].img}</div>
                       <div className='cart-text-container'>
                         <div className='cart-text-title'>{this.state.cart[0].title}</div>
-                        <div className='cart-text-price'>{`$${this.state.cart[0].price}.00`} x {this.state.cart[0].count} {`$${this.state.cart[0].price * this.state.counter}.00`}</div>
+                        <div className='cart-text-price'>{`$${this.state.cart[0].price}.00`} x {this.state.cart[0].count} {`$${this.state.cart[0].price * this.state.cart[0].count}.00`}</div>
                       </div>
                   </div>
                   <button className='checkout'>Checkout</button>
