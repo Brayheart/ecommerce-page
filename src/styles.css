@@ -6,6 +6,11 @@ h1 {
   color: white;
 }
 
+.price-master-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 @media only screen and (max-width: 500px) {
   .price-master-container {
     display: flex;
