@@ -6,6 +6,14 @@ h1 {
   color: white;
 }
 
+@media only screen and (max-width: 500px) {
+  .price-master-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
 .overlayImg {
   width: 100%;
 }

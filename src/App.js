@@ -158,12 +158,13 @@ class App extends React.Component {
               <p className='card-text'>These low-profile sneakers are your perfect casual wear companion. Featuring a 
               durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
 
-              <div className='price-container'>
-                <div>$125.00</div>
-                <div>50%</div>
+              <div className='price-master-container'>
+                  <div className='price-container'>
+                    <div>$125.00</div>
+                    <div>50%</div>
+                  </div>
+                  <div className='oldprice'>$250.00</div>
               </div>
-              
-              <div className='oldprice'>$250.00</div>
               <div className="cart-buttons">
                 <div className='cart-add-remove'>
                   <img onClick={this.remove} src={process.env.PUBLIC_URL + '/images/icon-minus.svg'} className='remove' alt="" />
