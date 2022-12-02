@@ -94,7 +94,9 @@ class App extends React.Component {
               {this.state.cart.length !== 0 && <p className='notification'>{this.state.cart[0].count}</p>}
               <img src={process.env.PUBLIC_URL + '/images/icon-cart.svg'} className='shopping-cart' alt="" />
             </button>
-            {this.state.cartView &&
+          </li>
+          <li><img src={process.env.PUBLIC_URL + '/images/image-avatar.png'} className='profile-img' alt="" /></li>
+          {this.state.cartView &&
               <div className='cart'>
               <h2 className='cart-title'>Cart</h2>
               {
@@ -116,8 +118,6 @@ class App extends React.Component {
               }
             </div>
             }
-          </li>
-          <li><img src={process.env.PUBLIC_URL + '/images/image-avatar.png'} className='profile-img' alt="" /></li>
         </div>
       </nav>
 
