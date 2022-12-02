@@ -120,6 +120,11 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
 }
+@media only screen and (max-width: 500px) {
+  .nav {
+    padding: 5px 20px;
+  }
+}
 
 .nav-items {
   display: flex;
@@ -128,6 +133,11 @@ h1 {
   gap: 20px;
   align-items: center;
   justify-content: center;
+}
+@media only screen and (max-width: 500px) {
+  .nav-items {
+    padding: 0px;
+  }
 }
 
 .cart {
