@@ -144,6 +144,10 @@ h1 {
 
 .half {
     width: 50%;
+
+    @media only screen and (max-width: 500px) {
+        width: 100%;
+      }
 }
 
 .carousel .thumbs {
@@ -152,9 +156,19 @@ h1 {
     padding: 0px;
 }
 
+.mobile-hidden {
+    @media only screen and (max-width: 500px) {
+        display: none;
+    }
+}
+
 .main-img {
     width: 70%;
     border-radius: 20px;
+
+    @media only screen and (max-width: 500px) {
+        width: 100%;
+      }
 }
 
 .main-content {
@@ -163,6 +177,10 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 20px;
+
+    @media only screen and (max-width: 500px) {
+        flex-direction: column;
+      }
 }
 
 .thumbnail {

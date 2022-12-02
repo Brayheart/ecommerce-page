@@ -83,10 +83,10 @@ class App extends React.Component {
       <nav className='nav'>
         <ol className='nav-items'>
           <li><img src={process.env.PUBLIC_URL + '/images/logo.svg'} alt="" /></li>
-          <li>Colections</li>
-          <li>Men</li>
-          <li>Women</li>
-          <li>Contact</li>
+          <li className='mobile-hidden'>Colections</li>
+          <li className='mobile-hidden'>Men</li>
+          <li className='mobile-hidden'>Women</li>
+          <li className='mobile-hidden'>Contact</li>
         </ol>
         <div className='nav-icons'>
           <li className='cart-master-container'>
