@@ -35,6 +35,11 @@ h1 {
   flex-direction: column;
   justify-content: space-evenly;
 }
+@media only screen and (max-width: 500px) {
+  .App {
+    padding: 0px;
+  }
+}
 
 .text-content-container {
   display: flex;
@@ -219,6 +224,24 @@ h1 {
   width: 15px;
   border-radius: 30px;
   color: white;
+}
+
+.mobile-carrasoul {
+  display: none;
+}
+@media only screen and (max-width: 500px) {
+  .mobile-carrasoul {
+    display: block;
+  }
+}
+
+.full-view {
+  display: block;
+}
+@media only screen and (max-width: 500px) {
+  .full-view {
+    display: none;
+  }
 }
 
 .companyname {

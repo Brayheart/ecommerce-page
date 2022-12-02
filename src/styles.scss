@@ -34,6 +34,10 @@ h1 {
     min-height: 100vh;
     flex-direction: column;
     justify-content: space-evenly;
+
+    @media only screen and (max-width: 500px) {
+        padding: 0px;
+      }
 }
 
 .text-content-container {
@@ -217,6 +221,20 @@ h1 {
     width: 15px;
     border-radius: 30px;
     color: white;
+}
+
+.mobile-carrasoul {
+    display: none;
+    @media only screen and (max-width: 500px) {
+        display: block;
+      }
+}
+
+.full-view {
+    display: block;
+    @media only screen and (max-width: 500px) {
+        display: none;
+      }
 }
 
 .companyname {

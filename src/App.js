@@ -121,8 +121,25 @@ class App extends React.Component {
         </div>
       </nav>
 
+      <div className='mobile-carrasoul'>
+        <Carousel>
+          <div>
+            <img src={process.env.PUBLIC_URL + '/images/image-product-1.jpg'} className='' alt="" />
+          </div>
+          <div>
+            <img src={process.env.PUBLIC_URL + '/images/image-product-2.jpg'} className='' alt="" />
+          </div>
+          <div>
+            <img src={process.env.PUBLIC_URL + '/images/image-product-3.jpg'} className='' alt="" />
+          </div>
+          <div>
+            <img src={process.env.PUBLIC_URL + '/images/image-product-4.jpg'} className='' alt="" />
+          </div>
+          </Carousel>
+      </div>
+
         <section class='main-content'>
-          <div className="half">
+          <div className="half full-view">
             <div className='main-img-container'>
               <img src={process.env.PUBLIC_URL + '/images/image-product-1.jpg'} className='main-img' alt="" />
               <div className='thumbnail-container'>
