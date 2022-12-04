@@ -5,6 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 import './styles.css';
 
 class App extends React.Component {
+
   constructor(){
     super()
 
@@ -58,7 +59,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-
         {
           this.state.modal && <div onClick={(e) => this.closeModal(e)} className="modal">
             <div className="modalContent">
