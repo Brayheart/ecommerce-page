@@ -141,7 +141,7 @@ class App extends React.Component {
         <section class='main-content'>
           <div className="half full-view">
             <div className='main-img-container'>
-              <img src={process.env.PUBLIC_URL + '/images/image-product-1.jpg'} className='main-img' alt="" />
+              <img onClick={this.Modal} src={process.env.PUBLIC_URL + '/images/image-product-1.jpg'} className='main-img' alt="" />
               <div className='thumbnail-container'>
                 <img onClick={this.Modal} src={process.env.PUBLIC_URL + '/images/image-product-1-thumbnail.jpg'} className='thumbnail' alt="" />
                 <img onClick={this.Modal} src={process.env.PUBLIC_URL + '/images/image-product-2-thumbnail.jpg'} className='thumbnail' alt="" />
@@ -167,9 +167,13 @@ class App extends React.Component {
               </div>
               <div className="cart-buttons">
                 <div className='cart-add-remove'>
-                  <img onClick={this.remove} src={process.env.PUBLIC_URL + '/images/icon-minus.svg'} className='remove' alt="" />
+                  <div onClick={this.remove} className='remove' >
+                    <img src={process.env.PUBLIC_URL + '/images/icon-minus.svg'} alt="" />
+                  </div>
                   <div>{this.state.counter}</div>
-                  <img onClick={this.add} src={process.env.PUBLIC_URL + '/images/icon-plus.svg'} className='add' alt="" />
+                  <div onClick={this.add} className='add'>
+                    <img src={process.env.PUBLIC_URL + '/images/icon-plus.svg'} alt="" />
+                  </div>
                 </div>
                 <button onClick={this.addToCart} className='add-to-cart'>Add to cart</button>
               </div>
